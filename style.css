@@ -1,0 +1,40 @@
+/* GENERAL */
+
+/* HEADER */
+
+header {
+  background-color: #df7a48;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  color: black;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+nav a {
+  color: rgb(42, 65, 240);
+  text-decoration: none;
+}
+
+/* HERO */
+
+/* INFORMATION */
+
+/* QUOTE */
+
+/* CALL TO ACTION */
+
+/* FOOTER */
