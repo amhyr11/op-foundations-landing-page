@@ -33,7 +33,7 @@ Built from the design provided by The Odin Project, with some personal touches a
 
 ## 🔗 Live Preview
 
-[View the live website](#)
+[View the live website soon](#)
 
 ## 🌱 Part of My Learning Journey
 
