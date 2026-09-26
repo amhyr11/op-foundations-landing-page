@@ -4,6 +4,6 @@ A responsive landing page built as part of The Odin Project Foundations course, 
 
 This project was focused on practicing **CSS Flexbox, page layout, spacing, typography, and styling**.
 
-### [🌐 View the **General Tso's Chicken** Website here!](https://amhyr11.github.io/tafe-unit-2-cybersecurity-training/)
+### [🌐 View the **General Tso's Chicken** Website here!](https://amhyr11.github.io/op-foundations-landing-page/)
 
-![General Tso's Chicken Website](./images/gohelp-page-overview.gif)
+![General Tso's Chicken Website](./images/live-site-screenshot.png)
