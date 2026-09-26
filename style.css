@@ -1,13 +1,11 @@
-/* =========================
-   COLOURS
-   ========================= */
+/* COLOURS */
 
 :root {
   --bg: #ffffff;
   --surface: #dbd9d3;
-  --surface-light: #e8e1e1;
+  --surface-light: #f3eeee;
   --text: #292535;
-  --text-muted: #5f5868;
+  --text-muted: #686258;
   --accent: #df7a48;
   --accent-hover: #c95f32;
   --accent-active: #a94724;
@@ -15,9 +13,7 @@
   --border: rgba(41, 37, 53, 0.18);
 }
 
-/* =========================
-   GENERAL
-   ========================= */
+/* GENERAL */
 
 html {
   font-family: "Roboto", "Courier New", Courier, monospace;
@@ -35,9 +31,7 @@ a {
   color: inherit;
 }
 
-/* =========================
-   HEADER / NAVIGATION
-   ========================= */
+/* HEADER / NAVIGATION */
 
 header {
   background-color: var(--accent);
@@ -51,7 +45,7 @@ header {
 
 .logo {
   display: block;
-  max-width: 180px;
+  max-width: 100px;
   height: auto;
 }
 
@@ -79,9 +73,7 @@ header nav a:hover {
   transform: translateY(-2px);
 }
 
-/* =========================
-   HAMBURGER
-   ========================= */
+/* HAMBURGER */
 
 .menu-toggle {
   display: none;
@@ -92,9 +84,7 @@ header nav a:hover {
   cursor: pointer;
 }
 
-/* =========================
-   HERO
-   ========================= */
+/* HERO */
 
 .hero {
   min-height: 75vh;
@@ -102,15 +92,35 @@ header nav a:hover {
   align-items: center;
   justify-content: center;
   padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--text);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background:
-    linear-gradient(rgba(41, 37, 53, 0.55), rgba(41, 37, 53, 0.55)),
-    url("images/hero.jpg") center / cover no-repeat;
+    linear-gradient(rgba(41, 37, 53, 0.72), rgba(41, 37, 53, 0.72)),
+    url("images/general-tsos-photo.png") center / cover no-repeat;
+  opacity: 0.45;
 }
 
 .hero-content {
   max-width: 700px;
   text-align: center;
   color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-logo {
+  display: block;
+  width: 180px;
+  max-width: 70%;
+  height: auto;
+  margin: 0 auto 1rem;
 }
 
 .eyebrow {
@@ -134,9 +144,7 @@ h1 {
   line-height: 1.6;
 }
 
-/* =========================
-   BUTTONS
-   ========================= */
+/* BUTTONS */
 
 .button {
   display: inline-block;
@@ -157,9 +165,7 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* =========================
-   SECTIONS
-   ========================= */
+/* SECTIONS */
 
 .content-section {
   min-height: 60vh;
@@ -189,9 +195,7 @@ h1 {
   line-height: 1.7;
 }
 
-/* =========================
-   FOOD QUOTE
-   ========================= */
+/* FOOD QUOTE */
 
 .food-quote {
   max-width: 800px;
@@ -205,9 +209,7 @@ h1 {
   font-style: italic;
 }
 
-/* =========================
-   MENU
-   ========================= */
+/* MENU */
 
 .menu-grid {
   display: flex;
@@ -260,9 +262,7 @@ h1 {
   color: var(--purple);
 }
 
-/* =========================
-   BACK TO TOP
-   ========================= */
+/* BACK TO TOP */
 
 .back-to-top {
   padding: 0.7rem 0.9rem;
@@ -302,9 +302,7 @@ h1 {
   }
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* FOOTER */
 
 footer {
   background-color: var(--surface);
@@ -327,12 +325,31 @@ footer {
   text-align: center;
 }
 
-/* =========================
-   ORDER CTA
-   ========================= */
+/* ORDER CTA */
 
 .order-section {
-  background-color: var(--bg);
+  background-color: var(--text);
+  position: relative;
+  overflow: hidden;
+}
+
+.order-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(41, 37, 53, 0.72), rgba(41, 37, 53, 0.72)),
+    url("images/pork-dumplings-photo.jpg") center / cover no-repeat;
+  opacity: 0.45;
+}
+
+.cta-text {
+  font-weight: 700;
+}
+
+.order-section .section-content {
+  position: relative;
+  z-index: 1;
 }
 
 .order-box {
@@ -342,11 +359,14 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 16px;
+
   background-color: var(--surface);
   border: 2px solid var(--purple);
   border-radius: 16px;
+
   box-shadow: 0 8px 20px rgba(41, 37, 53, 0.15);
+
   animation: order-float 3s ease-in-out infinite;
 }
 
@@ -358,7 +378,6 @@ footer {
 .order-box p {
   margin: 0.5rem 0 0;
 }
-
 @keyframes order-float {
   0%,
   100% {
