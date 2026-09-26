@@ -1,38 +1,155 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>General Tso's Landing Page</title>
-    
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
+
+    <meta
+      name="description"
+      content="Business landing page website for General Tso's American-Style Chinese Food"
     />
+
+    <meta name="author" content="AMHY11" />
+
+    <title>General Tso's — American-Style Chinese Food</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+
+  <body id="top">
     <header>
-      <img class="logo" src="images/logo.png" alt="General Tso's" />
+      <a href="#top">
+        <img class="logo" src="images/logo.png" alt="General Tso's" />
+      </a>
 
-      <nav>
-        <div class="nav-link">
-          <a href="#menu">Menu</a>
-        </div>
+      <!-- Mobile menu button -->
+      <button class="menu-toggle" aria-label="Open navigation">☰</button>
 
-        <div class="nav-link">
-          <a href="#about">About</a>
-        </div>
-
-        <div class="nav-link">
-          <a href="#order">Order</a>
-        </div>
+      <nav aria-label="Main navigation">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#order">Order</a>
       </nav>
-
-      <main>
-        <div class="hero"></div>
-      </main>
     </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">American-Style Chinese Food</p>
+
+          <h1>General Tso's</h1>
+
+          <p>
+            Big flavour, crispy favourites, and classic Chinese-American comfort
+            food.
+          </p>
+
+          <a class="button" href="#menu">View Our Menu</a>
+        </div>
+      </section>
+
+      <section id="menu" class="content-section">
+        <div class="section-content">
+          <p class="eyebrow">What's Cooking</p>
+          <h2>Our Menu</h2>
+
+          <div class="menu-grid">
+            <div class="menu-item">
+              <div class="menu-image">
+                <img
+                  src="images/general-tsos.jpg"
+                  alt="General Tso's Chicken"
+                />
+              </div>
+              <h3>General Tso's Chicken</h3>
+              <p>Crispy chicken in our signature sweet and spicy sauce.</p>
+              <span>$16</span>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-image">
+                <img src="images/lo-mein.jpg" alt="Lo Mein Noodles" />
+              </div>
+              <h3>Lo Mein Noodles</h3>
+              <p>Soft noodles stir-fried with vegetables and savoury sauce.</p>
+              <span>$13</span>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-image">
+                <img src="images/fried-rice.jpg" alt="Fried Rice" />
+              </div>
+              <h3>Fried Rice</h3>
+              <p>Wok-fried rice with vegetables and classic seasoning.</p>
+              <span>$11</span>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-image">
+                <img src="images/spring-rolls.jpg" alt="Spring Rolls" />
+              </div>
+              <h3>Spring Rolls</h3>
+              <p>Crispy golden rolls filled with seasoned vegetables.</p>
+              <span>$8</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="content-section section-alt">
+        <div class="section-content">
+          <p class="eyebrow">Our Philosophy</p>
+          <h2>One Dish. Endless Love.</h2>
+
+          <blockquote class="food-quote">
+            "General Tso's Chicken isn't just a dish. It's proof that the best
+            things in life are crispy, saucy, sweet, and a little bit spicy."
+          </blockquote>
+
+          <p class="quote-author">— Everyone with good taste</p>
+        </div>
+      </section>
+
+      <section id="order" class="content-section order-section">
+        <div class="section-content">
+          <p class="eyebrow">Ready to Eat?</p>
+          <div class="order-box">
+            <div>
+              <h2>Hungry?</h2>
+              <p>Get your General Tso's fix.</p>
+            </div>
+            <a href="#" class="button">Order Now</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a class="back-to-top" href="#top" aria-label="Back to top"> ↑ </a>
+
+    <footer>
+      <p class="copyright">&copy; 2026 AMHYR11. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Back to top button
+      const backToTop = document.querySelector(".back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+          backToTop.classList.add("show");
+        } else {
+          backToTop.classList.remove("show");
+        }
+      });
+
+      // Mobile navigation
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("header nav");
+
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+      });
+    </script>
   </body>
 </html>
